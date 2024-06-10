@@ -1,19 +1,31 @@
----
-import Card from "./Card.astro";
----
-
-<section class="pt-5">
-    <div>
-        <h2>Our Featured</h2>
-        <p>
-            <span>TRANSFORM</span> YOURBODY
-        </p>
-        <p>
-            TRANSFORM <span>YOURLIFE!</span>
-        </p>
-        <div>
-            <Card />
+<section class="mb-52">
+    <div class="flex flex-row mt-32 gap-72">
+        <div class="flex flex-col justify-start items-start space-y-3 pl-52">
+            <h2 class="text-[#dbff33] text-2xl">Who We Are</h2>
+            <p class="text-5xl">
+                ELEVATE YOUR
+                <span class="text-5xl font-extrabold space-y-3"
+                    >FITNESS <br /> JOURNEY WITHUS</span
+                >
+            </p>
         </div>
-        
+        <div>
+            <p class="w-[700px] text-gray-600">
+                En [Nombre del Gimnasio], nuestra misión es transformar vidas a
+                través del poder del ejercicio y la salud integral. Somos un
+                equipo apasionado y dedicado de profesionales del fitness que se
+                esfuerza por proporcionar un ambiente inclusivo y motivador para
+                todos nuestros miembros. Creemos que la salud no es solo una
+                meta, sino un estilo de vida. Cada miembro de nuestro equipo
+                está comprometido a ayudarte a alcanzar tus objetivos de
+                bienestar, ya sea mejorar tu fuerza, aumentar tu resistencia, o
+                simplemente sentirte mejor contigo mismo. Ofrecemos una amplia
+                gama de clases y programas personalizados que se adaptan a tus
+                necesidades y niveles de condición física.
+            </p>
+        </div>
+    </div>
+    <div class="mt-28 flex justify-center items-center">
+        <video src="/img/fit.mp4" autoplay loop muted class="w-[1000px]"></video>
     </div>
 </section>
