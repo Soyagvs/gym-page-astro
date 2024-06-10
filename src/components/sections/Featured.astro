@@ -1,9 +1,9 @@
 ---
-import Card from "./Card.astro";
+import Card from "@/components/common/Card.astro"
 ---
 
-<section class="pt-5 flex flex-col justify-center items-center">
-    <div class="flex flex-col justify-center items-center space-y-3 mt-32">
+<section class="pt-5 flex flex-col justify-center items-center mt-7" id="featured">
+    <div class="flex flex-col justify-center items-center space-y-5">
         <h2 class="text-[#dbff33] text-2xl">Our Featured</h2>
         <p class="text-5xl">
             <span class="text-5xl font-extrabold">TRANSFORM</span> YOURBODY
@@ -12,8 +12,8 @@ import Card from "./Card.astro";
             TRANSFORM <span class="text-5xl font-extrabold">YOURLIFE!</span>
         </p>
     </div>
-    <div class="flex gap-10 mt-20 mb-20">
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10">
+    <div class="flex mt-20 mb-20">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14">
             <Card image="/img/man-gym.webp" title="GYM" />
 
             <Card image="/img/yoga.webp" title="YOGA" />
