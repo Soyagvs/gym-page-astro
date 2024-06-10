@@ -1,1 +1,29 @@
-a
+---
+interface Props {
+    title?: string;
+    image: string;
+}
+const { title, image } = Astro.props;
+---
+
+<div
+    class="br flex flex-col justify-center items-center bor border bg-[#dbff33] border-[#dbff33]"
+>
+    <div class="hover:-translate-y-10 duration-100">
+        <div>
+            <img
+                src={image}
+                alt="Image the card"
+                class="w-[400px] h-[600px] bor"
+            />
+        </div>
+    </div>
+        <h3 class="text-3xl font-bold text-[#dbff33] absolute pt-[500px]">
+            {title}
+        </h3>
+</div>
+<style>
+    .bor {
+        border-radius: 20% 0%;
+    }
+</style>
