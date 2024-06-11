@@ -5,23 +5,78 @@ import Facebook from "@/icons/Facebook.astro";
 
 <header>
     <nav
-        class="h-24 items-center justify-evenly flex relative z-20 bg-slate-900"
+        class="h-24 items-center justify-between flex relative z-20 bg-slate-900 px-5 lg:px-20"
     >
         <div class="flex">
             <p class="text-white text-3xl">GYM</p>
         </div>
-        <div class="bg-slate-900">
-            <ul class="flex flex-row space-x-14 text-white text-[19px] max-lg:hidden">
-                <li><a href="/">Home</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#schedules">Schedules</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="hidden lg:flex bg-slate-900">
+            <ul class="flex flex-row space-x-20 text-white text-[19px]">
+                <li><a class="ag" href="/">Home</a></li>
+                <li><a class="ag" href="#featured">Featured</a></li>
+                <li><a class="ag" href="#about">About us</a></li>
+                <li><a class="ag" href="#schedules">Schedules</a></li>
+                <li><a class="ag" href="#contact">Contact</a></li>
             </ul>
         </div>
-        <div class="flex gap-5">
+        <div class="hidden lg:flex gap-5">
             <Instagram />
             <Facebook />
         </div>
+        <div class="lg:hidden flex items-center">
+            <button id="menu-button" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
     </nav>
+    <div id="mobile-menu" class="hidden bg-slate-900 lg:hidden">
+        <ul
+            class="flex flex-col justify-center items-center space-y-5 text-white text-[19px] p-5 "
+        >
+            <li><a class="ag" href="/">Home</a></li>
+            <li><a class="ag" href="#featured">Featured</a></li>
+            <li><a class="ag" href="#about">About us</a></li>
+            <li><a class="ag" href="#schedules">Schedules</a></li>
+            <li><a class="ag" href="#contact">Contact</a></li>
+        </ul>
+    </div>
 </header>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("mobile-menu");
+
+        if (menuButton && menu) {
+            menuButton.addEventListener("click", () => {
+                if (menu.classList.contains("hidden")) {
+                    menu.classList.remove("hidden");
+                    menu.classList.add("block");
+                } else {
+                    menu.classList.remove("block");
+                    menu.classList.add("hidden");
+                }
+            });
+        }
+    });
+</script>
+<style>
+    /* Estilo personalizado para el botón de hamburguesa */
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+    }
+    .ag:hover {
+        color: #dbff33;
+    }
+</style>
